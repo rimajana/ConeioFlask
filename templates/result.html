@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Coneio</title>
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<link rel="stylesheet" href="/static/css/style.css">
+<script type="text/javascript" src="{{ url_for('static', filename='script/main.js') }}"></script>
+<script src="/static/script/resultjs.js"></script>
+
+</head>
+<body onload="run()">
+
+
+
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>Your Results are Ready</p>
+                        
+                      
+                        <a href="/templates/index.html">
+                          <button >Home Page</button> 
+                        <!-- <input type="submit" name="" value="Home Page"/><br/> -->
+                      </a>
+                    </div>
+                    <div class="col-md-9 register-right">
+                     
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Coneio App</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                            
+                                            <table class="source">
+                                                <tr>
+                                                    <td>Source Port is</td>
+                                                    <td> <div id="Src_Port_Country">{{Src_Port}} in  {{Src_Country}}</div></td>
+                                                  
+                                                  </tr>
+                                                <tr>
+                                                  <td>Source Port Latitude is</td>
+                                                  <td id="src_lat">{{Src_Port_Lat}}  </td>
+                                                  
+                                                </tr>
+                                                <tr>
+                                                    <td>Source Port Longitude is </td>
+                                                    <td id="Src_Lng">{{Src_Port_Lng}}  </td>
+                                                    
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Experiment </td>
+                                                    <td id="Src_Lng"> {{ final_result.Src_Lat}}
+                                                                      
+                                                    </td>
+                                                    
+                                                  </tr>
+                                                
+                                            </table >
+
+                                            <table class="dest">
+                                                <tr>
+                                                    <tr>
+                                                        <td>Destination Port is</td>
+                                                        <td><div id="Dest_Port_Country"> {{(Dest_Port)}} in  {{Dest_Country}}</div></td>
+                                                      
+                                                      </tr>
+                                                    <td>Destination Port Latitude is</td>
+                                                    <td id="Dest_Lat"> {{Dest_Port_Lat}}  </td>
+                                                    
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Destination Port Longitude is </td>
+                                                    <td id="Dest_Lng">{{ Dest_Port_Lng }}  </td>
+                                                    
+                                                  </tr>
+                                                  
+                                                  
+                                                  
+                                              </table>        
+                                    
+                                          
+                                          
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+    
+            </div>
+            <h2> Polylines Between the given Loactions</h2>
+            <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+            <div id="map"></div>
+ 
+  
+  
+ 
+   <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCCGax04OJ2JxHOcCgQ39nM5IWkk7MCt8&callback=initMap&v=weekly"
+     defer
+   ></script> -->
+
+
+</body>
+</html>

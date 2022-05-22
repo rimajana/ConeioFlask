@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Coneio </title>
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<script src="/static/script/main.js"></script>
+<link rel="stylesheet" href="/static/css/style.css">
+<!-- /static/script/resultjs.js -->
+
+<!-- <script type="text/javascript" src="{{ url_for('static', filename='script/main.js') }}"></script> -->
+</head>
+<body>
+
+    <!-- Great way to prevent reloading the page when submitting using a form is by adding return false with your onsubmit attribute. -->
+<form action="" onsubmit="submitForm(); return false" >
+
+<!-- <form action="{{ url_for('getcoord') }}" method="POST" onsubmit="myFunction()" > -->
+  
+
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are few seconds away finding the Best Results!</p>
+                        <a href="#" >
+                            <button>Home Page</button>
+                        </a>
+                        <!-- <input type="submit" name="" value="Home Page"/><br/> -->
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Coneio App</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="source_city" name="source_city" placeholder="Enter Source City" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="src_country" name="src_country" placeholder="Enter Source Country" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="dest_city" name="dest_city" placeholder="Enter Destination City" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="dest_country" name="dest_country" placeholder="Enter Destination Country" required="required" />
+                                        </div>
+                                        <!-- onclick="myFunction()" -->
+                                        <button type="submit"  class="btn btn-primary btn-block btn-large"  >Submit</button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+    
+   <br>
+   <br>
+   <!-- {{ prediction_text }} -->
+    </div>
+</form>   
+
+
+</body>
+</html>
