@@ -16,6 +16,9 @@ app = Flask(__name__)
 CORS(app)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 # db = SQLAlchemy(app)
+@app.route('/')
+def hello():
+    return 'Hello world'
 
 @app.route('/my-route') 
 # @cross_origin()
